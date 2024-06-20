@@ -8,7 +8,6 @@ const initialState: InitialStateType = {
   item: {
     title: "",
     desc: "",
-    price: 0
   }
 };
 

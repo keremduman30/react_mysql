@@ -45,7 +45,7 @@ const BookDialog = () => {
   const handleClose = () => {
     reset(item);
     dispatch(setDialog({ open: false }));
-    dispatch(setItem({ item: { title: "", desc: "", price: 0 } }));
+    dispatch(setItem({ item: { title: "", desc: "" } }));
   };
 
   const onSubmitBook: SubmitHandler<Book> = data => {
@@ -54,7 +54,7 @@ const BookDialog = () => {
         updateBooks(data).unwrap();
       }
       if (add) {
-        addBooks({ ...data, price: 0 }).unwrap();
+        addBooks({ ...data }).unwrap();
       }
       handleClose();
     } catch (error) {

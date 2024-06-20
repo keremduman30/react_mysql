@@ -2,8 +2,6 @@ export type Book = {
   id?: number;
   title: string;
   desc: string;
-  cover?: string;
-  price?: number;
 };
 export type BookCardProp = {
   item: Book;
